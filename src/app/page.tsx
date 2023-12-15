@@ -1,9 +1,15 @@
-import Image from 'next/image'
+"use client";
+
+import { GalleryArea } from "@/components/GalleryArea";
+import { GalleryProvider } from "@/contexts/GalleryContext";
 
 export default function Home() {
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      
+    <main className="bg-black min-h-screen">
+      <GalleryProvider>
+        <GalleryArea />
+      </GalleryProvider>
     </main>
   )
 }
